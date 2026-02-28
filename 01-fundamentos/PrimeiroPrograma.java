@@ -11,7 +11,7 @@ public class PrimeiroPrograma {
 
 // todas as letras minusculas são usadas para nomear métodos ou variáveis, como "main" ou "args". O nome do arquivo pode ser diferente do nome do método ou variável, mas é recomendado que seja o mesmo para facilitar a identificação.
 
-// todas as letras maisvulsculas são usadas para nomear constantes, como "PI" ou "TAXA_DE_JUROS". O nome do arquivo pode ser diferente do nome da constante, mas é recomendado que seja o mesmo para facilitar a identificação.
+// todas as letras maisculsculas são usadas para nomear constantes, como "PI" ou "TAXA_DE_JUROS". O nome do arquivo pode ser diferente do nome da constante, mas é recomendado que seja o mesmo para facilitar a identificação.
 
 
 
