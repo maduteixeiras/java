@@ -9,9 +9,10 @@ public class Argumentos {
     } 
 }
 
-// Passando argumentos para o programa através do terminal: 
+// 1 - Compilando e executando o programa:
 // cd nome-da-pasta (Exemplo - cd 01-fundamentos)
 // dir (Verificar os arquivos da pasta)
 // javac nomedoarquivo.java (Compilar o código)
+// 2 -Passando argumentos para o programa através do terminal: 
 // java Argumentos >Arg1 Arg2 ...< (Passando os argumentos para o programa, separados por espaço)
 
