@@ -19,7 +19,9 @@ public class SaidaDeDados {
         System.out.printf("Price: %.2f on promotion! %n", price);
         
         System.out.println("Usando PrintF:");
-        System.out.printf("Product: %s%nModel: %d%nPrice: %.2f%n", product, model, price);
+        System.out.printf("Product: %s%n Model: %d%n Price: %.2f%n", product, model, price);
+
+    ");
     }
 }
 
