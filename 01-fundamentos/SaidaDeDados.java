@@ -21,7 +21,6 @@ public class SaidaDeDados {
         System.out.println("Usando PrintF:");
         System.out.printf("Product: %s%n Model: %d%n Price: %.2f%n", product, model, price);
 
-    ");
     }
 }
 

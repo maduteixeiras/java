@@ -33,10 +33,10 @@ public class Exercicio1 {
 // Enunciado do exercício:
 // 1. Declare e inicialize as seguintes variáveis:
 // - product1 = "Computer"
-// - product2 = "Office desk"  
+// - product2 = "Office desk"
 // - age = 30
 // - code = 5290
-// - gender = 'F'      
+// - gender = 'F'
 // - price1 = 2100.0
 // - price2 = 650.50
 // - measure = 53.234567
