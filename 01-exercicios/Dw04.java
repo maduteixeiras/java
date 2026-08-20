@@ -27,7 +27,7 @@ public class Dw04 {
                 break;
         }
         }while (op!=4);
-        
+        sc.close();
         
     }
     
