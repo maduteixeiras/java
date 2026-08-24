@@ -11,5 +11,6 @@ public class Main {
 
         String nome2 ="Anderson";
         System.out.println(nome2.toUpperCase());
+        sc.close();
     }
 }

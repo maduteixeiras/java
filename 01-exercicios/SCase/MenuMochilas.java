@@ -1,3 +1,4 @@
+package SCase;
 import java.util.Scanner;
 
 public class MenuMochilas {
