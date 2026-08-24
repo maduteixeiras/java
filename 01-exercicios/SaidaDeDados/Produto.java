@@ -1,3 +1,4 @@
+package SaidaDeDados;
 public class Produto {
     public static void main(String[] args) {
         var nomeDoProduto = "Teclado";
