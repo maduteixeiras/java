@@ -1,4 +1,4 @@
-package SCase;
+package SCcase;
 import java.util.Scanner;
 
 public class MenuCanetas {

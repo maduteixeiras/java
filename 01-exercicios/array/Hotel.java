@@ -4,94 +4,106 @@ public class Hotel {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int op;
-        int quartosCadastrados = 0;
-        final int tam = 5;
-
-        int[] quartos = new int[tam];
-        int[] camas = new int[tam];
-        
+        int maxQuartos = 5;
         int maxReservas = 25;
-        String[] hospedes = new String[tam];
 
+        int[] quartos = new int[maxQuartos];
+        int[] reservas = new int[maxReservas];
 
+        String[] hospedes = new String[maxReservas];
+        int[] quartoReserva = new int[maxReservas];
+        int[] camasDisponiveis = new int[maxQuartos];
+
+        int quantidadeQuartos;
+        int totalReservas = 0;
+
+        boolean quartosCadastrados = false;
+        boolean camasCadastradas = false;
+
+        int op;
+
+        System.out.println("Informe a quantidade de quartos disponíveis: (máximo de 5)");
+        quantidadeQuartos = sc.nextInt();
+
+        while (quantidadeQuartos < 1 || quantidadeQuartos > 5) {
+            System.out.println("Quantidade inválida! Digite um valor entre 1 e 5:");
+            quantidadeQuartos = sc.nextInt();
+        }
 
         do {
-            System.out.println("\nGestão de Cadastros");
-            System.out.println("1 - Cadastrar quartos");
-            System.out.println("2 - Reservar quarto");
-            System.out.println("3 - Consultar reservas por quarto");
-            System.out.println("4 - Consultar reservas por hóspede");
-            System.out.println("5 - Encerrar sistema");
 
-            System.out.print("Escolha uma opção: ");
+            System.out.println("-- Menu --");
+            System.out.println("1 - Registrar quartos");
+            System.out.println("2 - Registrar quantidade de camas");
+            System.out.println("3 - Reservar quartos");
+            System.out.println("4 - Consultar reservas por quarto");
+            System.out.println("5 - Consultar reserva por nome");
+            System.out.println("6 - Mostrar relatório geral");
+            System.out.println("7 - Encerrar");
+            System.out.println("Escolha uma opção:");
             op = sc.nextInt();
 
             switch (op) {
-                // Para cada quarto cadastrado, o sistema deve solicitar:
-
-                // Quantidade de camas disponíveis em cada quarto.
 
                 case 1:
-                    if (quartosCadastrados < tam) {
+                    System.out.println("\n-- Cadastro de quartos --");
 
-                        System.out.print("Digite o número do quarto: ");
-                        quartos[quartosCadastrados] = sc.nextInt();
-
-                        System.out.print("Informe a quantidade de camas disponíveis no quarto: ");
-                        camas[quartosCadastrados] = sc.nextInt();
-
-                        quartosCadastrados++;
-
-                        System.out.println("Quarto cadastrado com sucesso!");
-                        System.out.println("Você tem " + quartosCadastrados + " quarto cadastrado!");
-
-                    } else {
-                        System.out.println("Limite de quartos cadastrados atingido.");
+                    for (int i = 0; i < quantidadeQuartos; i++) {
+                        System.out.println("Informe o número do quarto " + (i + 1) + ":");
+                        quartos[i] = sc.nextInt();
                     }
 
+                    quartosCadastrados = true;
+                    System.out.println("Quartos cadastrados com sucesso!");
                     break;
-                    // Reservar quarto
-                    // Solicitar o número do quarto
-                    // verificar se o quarto existe
+
                 case 2:
-                    System.out.print("Digite o número do quarto: ");
-                    int quartoReserva = sc.nextInt();
+                    if (!quartosCadastrados) {
+                        System.out.println("Cadastre primeiro os números dos quartos!");
+                    } else {
+                        System.out.println("\n-- Cadastro de camas por quarto --");
 
-                    int i = 0;
+                        for (int i = 0; i < quantidadeQuartos; i++) {
+                            System.out.println(
+                                "Informe a quantidade de camas disponíveis do quarto "
+                                + quartos[i] + ":"
+                            );
 
-                    while (i < quartosCadastrados && quartos[i] != quartoReserva) {
-                        i++;
+                            camasDisponiveis[i] = sc.nextInt();
+                        }
 
-                        System.out.println("Inform o nome do hospede: ");
-                        String nomeHospede = sc.nextLine();
-                        
+                        camasCadastradas = true;
+                        System.out.println("Quantidade de camas cadastradas com sucesso!");
                     }
-
-
-
-                    
                     break;
 
                 case 3:
-                    break;
+                    if (!camasCadastradas) {
+                        System.out.println("Cadastre primeiro o número de quartos!");
+                    } else if (!camasCadastradas) {
+                        System.out.println("Cadastre primeiro as camas!");
+                    } else if (totalReservas >= maxReservas) {
+                        System.out.println("Limite de reservas atingido!");
+                    } else {
+                        int numerosQuartos;
+                        int posicaoQuartos = 1;
 
-                case 4:
-                    break;
+                        System.out.println("Informe o número do quarto para reserva:");
+                        numeroQuarto = sc.nextInt();
 
-                case 5:
-                    break;
+                        for (int i = 0; i < quantidadeQuartos; i++) {
+                            
 
-                case 6:
-                    System.out.println("Sistema encerrado.");
+                        }
+                        
+                    }
                     break;
 
                 default:
-                    System.out.println("Opção inválida.");
                     break;
             }
 
-        } while (op != 6);
+        } while (op != 7);
 
         sc.close();
     }
