@@ -82,13 +82,13 @@ public class CadastroContaBancaria {
 
                         boolean encontrada = false;
 
-                        for (Conta conta : lista) {
+                            for (Conta contaBusca : lista) {
 
-                            if (conta.numero.equals(buscaNumero)) {
+                            if (contaBusca.numero.equals(buscaNumero)) {
 
                                 System.out.println("Conta encontrada!");
-                                System.out.println("Titular: " + conta.titular);
-                                System.out.println("Saldo: R$ " + conta.saldo);
+                                System.out.println("Titular: " + contaBusca.titular);
+                                System.out.println("Saldo: R$ " + contaBusca.saldo);
 
                                 encontrada = true;
                                 break;
@@ -98,19 +98,42 @@ public class CadastroContaBancaria {
                             if (!encontrada) {
                                 throw new Exception("Conta não encontrada.");
                             }
-
+                            
                             break;
-
-
-                    default:
+                            
+                            
+                            default:
                         break;
-                }
+                        
+                        case 3:
+                            // Removendo conta
+                            System.out.println("Informe o número da conta que deseja remover: ");
+                            String buscaRemover = sc.nextLine();
+                    
+                            boolean encontrada2 = false;
+                    
+                                for (Conta contaBusca : lista) {
+                    
+                                if (contaBusca.numero.equals(buscaRemover)) {
 
-            } catch (Exception e) {
-                System.out.println("Erro: " + e.getMessage());
+                                    lista.remove(contaBusca);
+                                    System.out.println("Removido com sucesso!");
+                    
+                                    encontrada2 = true;
+                                    break;
+                                    }
+                                }
+                    
+                                if (!encontrada2) {
+                                    throw new Exception("Conta não encontrada. Impossível remover.");
+                                }
+                        }
+                        
+                    } catch (Exception e) {
+                        System.out.println("Erro: " + e.getMessage());
+                    }
+                }
+                
+                sc.close();
             }
         }
-
-        sc.close();
-    }
-}
