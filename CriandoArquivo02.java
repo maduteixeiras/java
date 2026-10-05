@@ -4,7 +4,7 @@ import java.io.IOException;
 public class CriandoArquivo02 {
     public static void main(String[] args) {
         try {
-            FileWriter escritor = new FileWriter("exemplo02.txt", true);
+            FileWriter escritor = new FileWriter("exemplo.txt", true);
             escritor.write("Primeira linha\n");
             escritor.write("Segunda linha\n");
 
