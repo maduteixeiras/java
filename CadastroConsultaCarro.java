@@ -17,6 +17,7 @@ public class CadastroConsultaCarro {
                 "2 - Listar Carros\n" +
                 "3 - Detalhar Carro\n" +
                 "4 - Alterar Carro\n" +
+                "5 - Remover Carro\n" +
                 "6 - Gravar Informações em Arquivo\n" +
                 "7 - Sair",
                 "Cadastro de Carros",
