@@ -1,7 +1,7 @@
 public class Veiculo {
-    protected String marca;
-    protected String modelo;
-    protected int ano;
+    private String marca;
+    private String modelo;
+    private int ano;
 
     public Veiculo(String marca, String modelo, int ano) {
         this.marca = marca;
@@ -9,12 +9,21 @@ public class Veiculo {
         this.ano = ano;
     }
 
-    public void ExibirDetalhes() {
-        System.out.println("Detalher do vceículo:\n" +
-            "Marca: " + marca +
-            "\nModelo: " + modelo +
-            "\nAno: " + ano
-        );
+    // metodos
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void exibirDetalhes() {
+
     }
 }
 
