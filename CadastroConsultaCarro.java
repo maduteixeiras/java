@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-import tryCatch.tryCatch;
 
 public class CadastroConsultaCarro {
     public static void main(String[] args) {
@@ -63,9 +62,23 @@ public class CadastroConsultaCarro {
                 case "3" :
                     String detalhado = JOptionPane.showInputDialog(null, "Informe o número do veículo que deseja buscar: ", "Detalhando Carro", JOptionPane.QUESTION_MESSAGE);
 
-                    if (detalhado == null) {
+                    if (detalhado == null || detalhado.trim().isEmpty()) {
+                        JOptionPane.showMessageDialog(null, "Veículo não encontado!");
                         
+                    } else {
+                        try {
+                            int detalhadoInt = Integer.parseInt(detalhado.trim());
+                            JOptionPane.showMessageDialog(null, listaCarros.get(detalhadoInt+1));
+                        } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, "Erro");
+                        }
                     }
+                    break;
+
+                case "7":
+                    JOptionPane.showMessageDialog(null, "Encerrando...");
+                    executando = false;
+
 
                                 
             
